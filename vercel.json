@@ -15,7 +15,7 @@
     "routes":[
         {
             "src":"/(.*)",
-            "dest":"../main.ts",
+            "dest":"/",
             "methods":[
                 "GET",
                 "POST",
