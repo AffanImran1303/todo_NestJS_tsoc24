@@ -12,13 +12,13 @@
             }
         }
     ],
+    "rewrites":[
+        {"source":"/(.*)","destination":"/"}
+    ],
     "routes":[
         {
-            "rewrites":[
-                {"source":"/(.*)",
-                 "destination":"/"
-                }
-            ],
+            "src":"/(.*)",
+            "dest":"../main.ts",
             "methods":[
                 "GET",
                 "POST",
