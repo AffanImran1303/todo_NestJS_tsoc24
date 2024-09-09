@@ -14,8 +14,11 @@
     ],
     "routes":[
         {
-            "src":"/(.*)",
-            "dest":"/",
+            "rewrites":[
+                {"source":"/(.*)",
+                 "destination":"/"
+                }
+            ],
             "methods":[
                 "GET",
                 "POST",
