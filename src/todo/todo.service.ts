@@ -38,7 +38,7 @@ export class TodoService {
   }
 
  async findOne(id: number) {
-    return this.databaseServices.todo.findFirst({
+    return await this.databaseServices.todo.findFirst({
       where:{
         id:id
       }
@@ -46,7 +46,7 @@ export class TodoService {
   }
 
   async update(id: number, updateTodoDto: UpdateTodoDto) {
-    return this.databaseServices.todo.update({
+    return await this.databaseServices.todo.update({
       where:{
         id:id
       },
@@ -54,8 +54,8 @@ export class TodoService {
     });
   }
 
-  remove(id: number) {
-    return this.databaseServices.todo.delete({
+  async remove(id: number) {
+    return await this.databaseServices.todo.delete({
       where:{
         id:id
       }
